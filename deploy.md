@@ -1,18 +1,31 @@
 # Rapport de déploiement - [NAILI]
-## Liens- **Application en ligne :** [[URL_SCALINGO](https://evaluation.osc-fr1.scalingo.io/)]- **Dépôt de code :** [https://github.com/Samiha55]
-## Prérequis techniques
+## Liens- **Application en ligne :** [https://evaluation.osc-fr1.scalingo.io/](https://evaluation.osc-fr1.scalingo.io/)]- **Dépôt de code :** [https://github.com/Samiha55]
 
-## Fichier de configuration CI
-......
 ## Procédure de déploiement pas à pas
-on vérifie si on a déjà linker notre projet sur github
-On voie qu’on a connecté le compt github sur scallingo
-Je créé l’appli
 
-On choisit quelle méthode de déploiment (por moi c’est github)
-on ajoute les variable d'envirenement   APP_ENV et APP_SECRET(mame et valeur)
 
-et clic sur deploy  aprés on clic sur trigger et créér l'appli
+## Prérequis techniques
+1. Prérequis techniques
+PHP 8.4+ avec l'extension pdo_msql
+Composer installé
+Un compte Scalingo
 
-Lien GitHub Samiha AFEC 20225                                                                                                                                                                          file:///C:/Samiha55/La-toile-4
+server_version: '5.7'
+3. Fichier de configuration CI
+Le fichier de configuration de l'intégration continue se trouve dans : .github/workflows/ci.yaml
 
+Procédure de déploiement pas à pas
+A. Initialisation sur Scalingo
+1. Créer l'application
+
+B. Ajout de variables d'environnement
+Ajouter des variables d'environnement sur Scalingo
+1. APP_ENV = prod
+2. APP_SECRET = (par exemple copier la valeur de : echo bin2hex(random_bytes(16)) )
+
+C. Préparation du code
+
+
+3. Commit des changement git commit -m "Mise à jour effectuée"
+D. Mise en ligne
+1. Push des commits : git push
