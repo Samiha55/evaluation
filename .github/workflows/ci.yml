@@ -1,0 +1,22 @@
+# Le nom de ton assistant
+name: Verification du Projet eval
+
+# Quand doit-il travailler ?
+on: [push]
+
+# Qu'est-ce qu'il doit faire ?
+jobs:
+  verification-basique:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Installer PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+
+      - name: Verifier l'installation
+        run: composer install --no-scripts

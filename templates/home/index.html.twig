@@ -1,0 +1,19 @@
+{# templates/home/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div style="text-align:center; margin-top:100px;">
+        <h1>Bienvenue</h1>
+
+        <p><strong>Nom :</strong> NAILI</p>
+        <p><strong>Prénom :</strong> Samiha</p>
+
+        <p>
+            <strong>Date et heure :</strong>
+            {{ "now"|date("d/m/Y H:i:s") }}
+        </p>
+    </div>
+{% endblock %}
