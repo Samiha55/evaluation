@@ -6,7 +6,7 @@
   https://evaluation.osc-fr1.scalingo.io/
 
 - **Dépôt GitHub :**  
-  https://github.com/Samiha55
+  https://github.com/Samiha55/evaluation
 
 ---
 
